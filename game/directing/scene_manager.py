@@ -11,3 +11,4 @@ from game.casting.racket import Racket
 from game.casting.stats import Stats
 from game.casting.text import Text
 from game.scripting.change_scene_action import ChangeSceneAction
+from game.scripting.check_over_action import CheckOverAct
