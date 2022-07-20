@@ -11,4 +11,24 @@ from game.casting.racket import Racket
 from game.casting.stats import Stats
 from game.casting.text import Text
 from game.scripting.change_scene_action import ChangeSceneAction
-from game.scripting.check_over_action import CheckOverAct
+from game.scripting.check_over_action import CheckOverAction
+from game.scripting.collide_borders_action import CollideBordersAction
+from game.scripting.collide_brick_action import CollideBrickAction
+from game.scripting.collide_racket_action import CollideRacketAction
+from game.scripting.control_racket_action import ControlRacketAction
+from game.scripting.draw_ball_action import DrawBallAction
+from game.scripting.draw_bricks_action import DrawBricksAction
+from game.scripting.draw_dialog_action import DrawDialogAction
+from game.scripting.draw_hud_action import DrawHudAction
+from game.scripting.draw_racket_action import DrawRacketAction
+from game.scripting.end_drawing_action import EndDrawingAction
+from game.scripting.initialize_devices_action import InitializeDevicesActionn
+from game.scripting.load_assets_action import LoadAssetsAction
+from game.scripting.move_ball_action import MoveBallAction
+from game.scripting.move_racket_action import MoveRacketAction
+from game.scripting.play_sound_action import PlaySoundAction
+from game.scripting.release_devices_action import ReleaseDevicesAction
+from game.scripting.start_drawing_action import StartDrawingAction
+from game.scripting.timed_change_scene_action import TimedChangeSceneAction
+from game.scripting.unload_assets_action import UnloadAssetsAction
+from game.services.raylib.
