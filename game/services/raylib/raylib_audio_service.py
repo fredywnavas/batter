@@ -1,4 +1,3 @@
-from asyncore import file_dispatcher
 import os
 import pathlib
 import pyray
@@ -30,3 +29,21 @@ class RaylibAudioService(AudioService):
         sound = self._sounds[filepath]
         # pyray.set_sound_volume(volume)
         pyray.play_sound(sound)
+
+    def releas(self):
+        pyray.close_audio_device()
+
+    def unload_sounds(self):
+        for sound in self._sounds.values():
+            pyray.unload_sound(sound)
+        self._sounds.clear()
+
+    def _get_filepaths(self, directory, filter):
+        filepaths = []
+        for file in os.listdir(directory):
+            filename = os.path.join(directory, file)
+            extension = pathlib.Path(filename).suffix.lower()
+            if extension in filter:
+                filename = str(pathlib.Path(filename))
+                filepaths.append(filename)
+        return filepaths
