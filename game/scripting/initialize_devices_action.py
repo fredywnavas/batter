@@ -1,7 +1,7 @@
 from game.scripting.action import Action
 
 
-class InitializeDevicesActionn(Action):
+class InitializeDevicesAction(Action):
 
     def __init__(self, audio_service, video_service):
         self._audio_service = audio_service

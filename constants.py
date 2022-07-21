@@ -58,7 +58,7 @@ GAME_OVER = 4
 
 # LEVELS
 LEVEL_FILE = "batter/assets/data/level-{:03}.txt"
-BASE_LEVEL = 5
+BASE_LEVELS = 5
 
 
 ##############################################
@@ -66,7 +66,7 @@ BASE_LEVEL = 5
 ##############################################
 
 # PHASES
-INITIALIZER = 0
+INITIALIZE = 0
 LOAD = 1
 INPUT = 2
 UPDATE = 3
