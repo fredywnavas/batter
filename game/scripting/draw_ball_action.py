@@ -1,4 +1,3 @@
-from turtle import position
 from constants import *
 from game.scripting.action import Action
 

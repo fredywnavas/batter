@@ -86,7 +86,7 @@ class RaylibVideoService(VideoService):
         return not pyray.window_should_close()
 
     def load_fonts(self, directory):
-        filepaths = self._get_filepaths(directory, [".oft", ".ttf"])
+        filepaths = self._get_filepaths(directory, [".otf", ".ttf"])
         for filepath in filepaths:
             if filepath not in self._fonts.keys():
                 font = pyray.load_font(filepath)

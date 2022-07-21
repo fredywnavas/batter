@@ -165,7 +165,7 @@ class SceneManager:
 
     def _add_bricks(self, cast):
         cast.clear_actors(BRICK_GROUP)
-
+        
         stats = cast.get_first_actor(STATS_GROUP)
         level = stats.get_level() % BASE_LEVELS
         filename = LEVEL_FILE.format(level)
@@ -180,11 +180,11 @@ class SceneManager:
                     y = FIELD_TOP + r * BRICK_HEIGHT
                     color = column[0]
                     frames = int(column[1])
-                    points = BRICK_POINTS
-
+                    points = BRICK_POINTS 
+                    
                     if frames == 1:
                         points *= 2
-
+                    
                     position = Point(x, y)
                     size = Point(BRICK_WIDTH, BRICK_HEIGHT)
                     velocity = Point(0, 0)

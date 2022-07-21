@@ -21,7 +21,7 @@ class Cast:
             self._actors[group] = []
         self._actors[group].append(actor)
 
-    def clear_actor(self, group):
+    def clear_actors(self, group):
         """
         Clears actors from the given group.
 

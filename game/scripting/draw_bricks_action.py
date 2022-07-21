@@ -1,4 +1,3 @@
-from curses.textpad import rectangle
 from constants import *
 from game.scripting.action import Action
 
