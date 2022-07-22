@@ -1,9 +1,9 @@
 from constants import *
-from game.casting.actor import Actor
+from game.casting.player import Player
 from game.casting.point import Point
 
 
-class Racket(Actor):
+class Racket(Player):
     """
     An implement used to hit and bounce the ball in the game.
     """

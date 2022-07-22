@@ -8,7 +8,7 @@ from game.casting.color import Color
 
 # GAME
 GAME_NAME = "Batter"
-FRAME_RATE = 60
+FRAME_RATE = 30
 
 # SCREEN
 SCREEN_WIDTH = 1040
@@ -98,11 +98,11 @@ BALL_GROUP = "balls"
 BALL_IMAGE = "assets/images/000.png"
 BALL_WIDTH = 28
 BALL_HEIGHT = 28
-BALL_VELOCITY = 6
+BALL_VELOCITY = 5
 
 # RACKET
 RACKET_GROUP = "rackets"
-RACKET_IMAGES = [F"assets/images/{n:03}.png" for n in range(100, 103)]
+RACKET_IMAGES = [F"assets/images/{n:03}.png" for n in range(100, 104)]
 RACKET_WIDTH = 106
 RACKET_HEIGHT = 28
 RACKET_RATE = 6

@@ -8,7 +8,7 @@ class DrawBallAction(Action):
         self._video_service = video_service
 
     def execute(self, cast, script, callback):
-        ball = cast.get_first_actor(BALL_GROUP)
+        ball = cast.get_first_player(BALL_GROUP)
         body = ball.get_body()
 
         if ball.is_debug():

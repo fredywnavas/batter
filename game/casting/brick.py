@@ -1,7 +1,7 @@
-from game.casting.actor import Actor
+from game.casting.player import Player
 
 
-class Brick(Actor):
+class Brick(Player):
     """
     A solid, rectangular object that can be broken.
     """

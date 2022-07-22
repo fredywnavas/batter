@@ -8,7 +8,7 @@ class DrawBricksAction(Action):
         self._video_service = video_service
 
     def execute(self, cast, script, callback):
-        bricks = cast.get_actors(BRICK_GROUP)
+        bricks = cast.get_players(BRICK_GROUP)
 
         for brick in bricks:
             body = brick.get_body()

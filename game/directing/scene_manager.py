@@ -126,7 +126,7 @@ class SceneManager:
 
     def _prepare_in_play(self, cast, script):
         self._active_ball(cast)
-        cast.clear_actors(DIALOG_GROUP)
+        cast.clear_players(DIALOG_GROUP)
 
         script.clear_actions(INPUT)
         script.add_action(INPUT, self.CONTROL_RACKET_ACTION)
@@ -148,11 +148,11 @@ class SceneManager:
     #########################
 
     def _active_ball(self, cast):
-        ball = cast.get_first_actor(BALL_GROUP)
+        ball = cast.get_first_player(BALL_GROUP)
         ball.release()
 
     def _add_ball(self, cast):
-        cast.clear_actors(BALL_GROUP)
+        cast.clear_players(BALL_GROUP)
         x = CENTER_X - BALL_WIDTH / 2
         y = SCREEN_HEIGHT - RACKET_HEIGHT - BALL_HEIGHT
         position = Point(x, y)
@@ -161,12 +161,12 @@ class SceneManager:
         body = Body(position, size, velocity)
         image = Image(BALL_IMAGE)
         ball = Ball(body, image, True)
-        cast.add_actor(BALL_GROUP, ball)
+        cast.add_player(BALL_GROUP, ball)
 
     def _add_bricks(self, cast):
-        cast.clear_actors(BRICK_GROUP)
+        cast.clear_players(BRICK_GROUP)
         
-        stats = cast.get_first_actor(STATS_GROUP)
+        stats = cast.get_first_player(STATS_GROUP)
         level = stats.get_level() % BASE_LEVELS
         filename = LEVEL_FILE.format(level)
 
@@ -194,43 +194,43 @@ class SceneManager:
                     animation = Animation(images, BRICK_RATE, BRICK_DELAY)
 
                     brick = Brick(body, animation, points)
-                    cast.add_actor(BRICK_GROUP, brick)
+                    cast.add_player(BRICK_GROUP, brick)
 
     def _add_dialog(self, cast, message):
-        cast.clear_actors(DIALOG_GROUP)
+        cast.clear_players(DIALOG_GROUP)
         text = Text(message, FONT_FILE, FONT_SMALL, ALIGN_CENTER)
         position = Point(CENTER_X, CENTER_Y)
         label = Label(text, position)
-        cast.add_actor(DIALOG_GROUP, label)
+        cast.add_player(DIALOG_GROUP, label)
 
     def _add_level(self, cast):
-        cast.clear_actors(LEVEL_GROUP)
+        cast.clear_players(LEVEL_GROUP)
         text = Text(LEVEL_FORMAT, FONT_FILE, FONT_SMALL, ALIGN_LEFT)
         position = Point(HUD_MARGIN, HUD_MARGIN)
         label = Label(text, position)
-        cast.add_actor(LEVEL_GROUP, label)
+        cast.add_player(LEVEL_GROUP, label)
 
     def _add_lives(self, cast):
-        cast.clear_actors(LIVES_GROUP)
+        cast.clear_players(LIVES_GROUP)
         text = Text(LIVES_FORMAT, FONT_FILE, FONT_SMALL, ALIGN_RIGHT)
         position = Point(SCREEN_WIDTH - HUD_MARGIN, HUD_MARGIN)
         label = Label(text, position)
-        cast.add_actor(LIVES_GROUP, label)
+        cast.add_player(LIVES_GROUP, label)
 
     def _add_score(self, cast):
-        cast.clear_actors(SCORE_GROUP)
+        cast.clear_players(SCORE_GROUP)
         text = Text(SCORE_FORMAT, FONT_FILE, FONT_SMALL, ALIGN_CENTER)
         position = Point(CENTER_X, HUD_MARGIN)
         label = Label(text, position)
-        cast.add_actor(SCORE_GROUP, label)
+        cast.add_player(SCORE_GROUP, label)
 
     def _add_stats(self, cast):
-        cast.clear_actors(STATS_GROUP)
+        cast.clear_players(STATS_GROUP)
         stats = Stats()
-        cast.add_actor(STATS_GROUP, stats)
+        cast.add_player(STATS_GROUP, stats)
 
     def _add_racket(self, cast):
-        cast.clear_actors(RACKET_GROUP)
+        cast.clear_players(RACKET_GROUP)
         x = CENTER_X - RACKET_WIDTH / 2
         y = SCREEN_HEIGHT - RACKET_HEIGHT
         position = Point(x, y)
@@ -239,7 +239,7 @@ class SceneManager:
         body = Body(position, size, velocity)
         animation = Animation(RACKET_IMAGES, RACKET_RATE)
         racket = Racket(body, animation)
-        cast.add_actor(RACKET_GROUP, racket)
+        cast.add_player(RACKET_GROUP, racket)
 
     ###########################
     ##————scripting methods——##

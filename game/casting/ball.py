@@ -1,9 +1,9 @@
 import random
 from constants import *
-from game.casting.actor import Actor
+from game.casting.player import Player
 from game.casting.point import Point
 
-class Ball(Actor):
+class Ball(Player):
     """
     A solid, spherical object that is bounced around in the game.
     """

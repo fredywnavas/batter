@@ -9,7 +9,7 @@ class DrawDialogAction(Action):
         self._video_service = video_service
 
     def execute(self, cast, script, callback):
-        dialogs = cast.get_actors(DIALOG_GROUP)
+        dialogs = cast.get_players(DIALOG_GROUP)
         for dialog in dialogs:
             text = dialog.get_text()
             position = dialog.get_position()

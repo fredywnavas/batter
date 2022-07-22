@@ -1,7 +1,7 @@
-from game.casting.actor import Actor
+from game.casting.player import Player
 
 
-class Label(Actor):
+class Label(Player):
     """
     A label to be displayed.
     """

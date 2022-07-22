@@ -9,7 +9,7 @@ class MoveRacketAction(Action):
         pass
 
     def execute(self, cast, script, callback):
-        racket = cast.get_first_actor(RACKET_GROUP)
+        racket = cast.get_first_player(RACKET_GROUP)
         body = racket.get_body()
         velocity = body.get_velocity()
         position = body.get_position()

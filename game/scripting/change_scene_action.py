@@ -1,4 +1,3 @@
-from operator import ne
 from constants import *
 from game.scripting.action import Action
 

@@ -10,7 +10,7 @@ class CollideBordersAction(Action):
         self._audio_service = audio_service
 
     def execute(self, cast, script, callback):
-        ball = cast.get_first_actor(BALL_GROUP)
+        ball = cast.get_first_player(BALL_GROUP)
         body = ball.get_body()
         position = body.get_position()
         x = position.get_x()
@@ -31,7 +31,7 @@ class CollideBordersAction(Action):
             self._audio_service.play_sound(bounce_sound)
 
         elif y >= (FIELD_BOTTOM - BALL_WIDTH):
-            stats = cast.get_first_actor(STATS_GROUP)
+            stats = cast.get_first_player(STATS_GROUP)
             stats.lose_life()
 
             if stats.get_lives() > 0:

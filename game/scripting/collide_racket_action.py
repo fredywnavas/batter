@@ -10,8 +10,8 @@ class CollideRacketAction(Action):
         self._audio_service = audio_service
 
     def execute(self, cast, script, callback):
-        ball = cast.get_first_actor(BALL_GROUP)
-        racket = cast.get_first_actor(RACKET_GROUP)
+        ball = cast.get_first_player(BALL_GROUP)
+        racket = cast.get_first_player(RACKET_GROUP)
 
         ball_body = ball.get_body()
         racket_body = racket.get_body()

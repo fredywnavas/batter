@@ -1,8 +1,9 @@
+from raylib import PlayAudioStream
 from constants import *
-from game.casting.actor import Actor
+from game.casting.player import Player
 
 
-class Stats(Actor):
+class Stats(Player):
     """
     The game stats.
     """
