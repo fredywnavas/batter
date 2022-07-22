@@ -3,6 +3,13 @@
 ## Overview
   
   Batter is a game where the player tries to destroy a wall of bricks by hitting a ball into them.
+
+## What you need to run the game:
+
+  Python 3.8 or newer up and running on your machine.
+  Open your terminal and browse to the project's root folder (__main__).
+  You can also run it from an IDE (such as VS Code). Start your IDE and open the containing folder and run the __main__.py file.
+
   
   
 ## Rules
